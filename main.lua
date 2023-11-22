@@ -1,7 +1,7 @@
-local SelfModules = {
-  Functions = loadstring(game:HttpGet("https://raw.githubusercontent.com/FreekzOfficial/FreekzHub/main/functions.lua"))()
-}
-
+local s, e = pcall(function()
+	return loadstring(game:HttpGet("https://raw.githubusercontent.com/FreekzOfficial/FreekzHub/main/functions.lua"))()
+end)
+if not s then game.Players.LocalPlayer:Kick(`Error loading functions {e}`) end
 local LocalPlayer = _SRV("Players").LocalPlayer
 local OrionLib = _GHTTP('https://raw.githubusercontent.com/shlexware/Orion/main/source', nil, true)()
 
