@@ -6,12 +6,14 @@ local gameIds = {
 };
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))();
 local Window = OrionLib:MakeWindow({Name = "Title of the library", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
-getgenv()["OrionWindow"] = Window;
-getfenv()["OrionWin"] = Window;
-_G.OrionW = Window;
+local Tab = Window:MakeTab({
+	Name = "Tab 1",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+});
 local tfind = function(x, y) for i,v in next, x do if (i == y) then return true end end return false end
 if (tfind(gameIds, tostring(gid)) then
-	loadstring(game:HttpGet(("https://raw.githubusercontent.com/FreekzOfficial/FreekzHub/main/games/" .. gameIds[tostring(gid)] .. ".lua")))()();
+	loadstring(game:HttpGet(("https://raw.githubusercontent.com/FreekzOfficial/FreekzHub/main/games/" .. gameIds[tostring(gid)] .. ".lua")))();
 else
 	OrionLib:MakeNotification({
 		Name = "Warning!",
