@@ -9,11 +9,7 @@ Functions._SRV = function(ServiceName: string)
   return Service;
 end
 
-Functions._GHTTP = function(URL: string, chunkname: string, toLoadString: boolean)
-  if (type(chunkname) ~= "string" or chunkname == nil) then chunkname = "contents" end
-  if (toLoadString == true) then
-   return loadstring(game:HttpGet(URL, chunkname)) ;
-  end
+Functions._GHTTP = function(URL: string, chunkname: string)
   return game:HttpGet(URL, chunkname);
 end
 
