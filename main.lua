@@ -1,7 +1,5 @@
-local s, e = pcall(function()
-	return loadstring(game:HttpGet("https://raw.githubusercontent.com/FreekzOfficial/FreekzHub/main/functions.lua"))()
-end)
-if not s then game.Players.LocalPlayer:Kick(`Error loading functions {e}`) end
+loadstring(game:HttpGet("https://raw.githubusercontent.com/FreekzOfficial/FreekzHub/main/functions.lua"))()
+
 local LocalPlayer = _SRV("Players").LocalPlayer
 local OrionLib = _GHTTP('https://raw.githubusercontent.com/shlexware/Orion/main/source', nil, true)()
 
@@ -11,7 +9,15 @@ local Tab = Window:MakeTab({
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 });
-print(LocalPlayer)
+Tab:AddTextbox({
+	Name = "Textbox",
+	Default = "default box input",
+	TextDisappear = true,
+	Callback = function(Value)
+		print(Value)
+	end	  
+});
 
 # Initialize the Hub UI
 OrionLib:Init()
+
