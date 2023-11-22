@@ -1,7 +1,7 @@
 loadstring(game:HttpGet("https://raw.githubusercontent.com/FreekzOfficial/FreekzHub/main/functions.lua"))()
 
 local LocalPlayer = _SRV("Players").LocalPlayer
-local OrionLib = loadstring(_GHTTP('https://raw.githubusercontent.com/shlexware/Orion/main/source', 'contents'))()
+local OrionLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/shlexware/Orion/main/source"))()
 
 local Window = OrionLib:MakeWindow({Name = "FreekzHub", IntroEnabled = true, IntroText = "Welcome to FreekzHub ", HidePremium = false})
 local Tab = Window:MakeTab({
