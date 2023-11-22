@@ -11,7 +11,7 @@ getfenv()["OrionWin"] = Window;
 _G.OrionW = Window;
 local tfind = function(x, y) for i,v in next, x do if (i == y) then return true end end return false end
 if (tfind(gameIds, tostring(gid)) then
-	loadstring(game:HttpGet(("https://raw.githubusercontent.com/FreekzOfficial/FreekzHub/main/games/" .. gameIds[tostring(gid)] .. ".lua")))();
+	loadstring(game:HttpGet(("https://raw.githubusercontent.com/FreekzOfficial/FreekzHub/main/games/" .. gameIds[tostring(gid)] .. ".lua")))()();
 else
 	OrionLib:MakeNotification({
 		Name = "Warning!",
