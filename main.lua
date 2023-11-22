@@ -1,5 +1,5 @@
 local SelfModules = {
-  Functions = loadstring(game:HttpGet("https://raw.githubusercontent.com/FreekzOfficial/FreekzHub/main/functions.lua"), "Error loading functions")()
+  Functions = loadstring(game:HttpGet("https://raw.githubusercontent.com/FreekzOfficial/FreekzHub/main/functions.lua"))()
 }
 
 local LocalPlayer = _SRV("Players").LocalPlayer
@@ -10,5 +10,8 @@ local Tab = Window:MakeTab({
 	Name = "Tab 1",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
-})
+});
 print(LocalPlayer)
+
+# Initialize the Hub UI
+OrionLib:Init()
