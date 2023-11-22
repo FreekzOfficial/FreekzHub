@@ -9,8 +9,13 @@ Functions._SRV = function(ServiceName: string)
   return Service;
 end
 
-Functions._GHTTP = function(URL: string, chunkname: string)
-  return game:HttpGet(URL, chunkname);
+Functions._GHTTP = function(URL: string, toLoadString: boolean, chunkname: string)
+  if (toLoadString) then
+    chunkname = chunkname or "contents";
+    return loadstring(game:HttpGet(URL), chunkname);
+  end
+
+  return game:HttpGet(URL);
 end
 
 for FName, FFunc in next, Functions do
